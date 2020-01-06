@@ -1081,13 +1081,7 @@ BOOL isExiting = FALSE;
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    if (IsAtLeastiOSVersion(@"7.0") && !viewRenderedAtLeastOnce) {
-        viewRenderedAtLeastOnce = TRUE;
-        CGRect viewBounds = [self.webView bounds];
-        self.webView.frame = viewBounds;
-    }
     [self rePositionViews];
-    
     [super viewWillAppear:animated];
 }
 
